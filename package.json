@@ -1,0 +1,24 @@
+{
+  "name": "uts_vincent",
+  "version": "1.0.0",
+  "description": "uts",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u0016https://github.com/Vincent73772/uts_vincent.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent73772/uts_vincent.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vincent73772/uts_vincent/issues"
+  },
+  "homepage": "https://github.com/Vincent73772/uts_vincent#readme"
+}
