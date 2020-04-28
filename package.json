@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Vincent73772/uts_vincent/issues"
   },
-  "homepage": "https://github.com/Vincent73772/uts_vincent#readme"
+  "homepage": "https://github.com/Vincent73772/uts_vincent#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
 }
