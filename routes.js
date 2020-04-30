@@ -62,5 +62,8 @@ module.exports = function(app){
 
     app.route('/hapuslevel')
     .delete(jsonku.hapuslevel);
+
+    app.route('/hapusservice')
+    .delete(jsonku.hapusservice);
 }
    
