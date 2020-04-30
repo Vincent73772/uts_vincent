@@ -8,7 +8,7 @@ var ip = require('ip');
 
 
 //controller untuk register
-exports.registrasi = function (req, res) {
+exports.registrasi = function(req,res){
     var post = {
         username: req.body.username,
         email: req.body.email,
@@ -16,31 +16,32 @@ exports.registrasi = function (req, res) {
         role: req.body.role,
         tanggal_daftar: new Date()
     }
+
     var query = "SELECT email FROM ?? WHERE ??=?";
-    var table = ["t_user", "email", post.email];
+    var table = ["t_user","email", post.email];
 
-    query = mysql.format(query, table);
+    query = mysql.format(query,table);
 
-    connection.query(query, function (error, rows) {
-        if (error) {
+    connection.query(query, function(error, rows) {
+        if(error){
             console.log(error);
 
-        } else {
-            if (rows.length == 0) {
+        }else {
+            if(rows.length == 0){
                 var query = "INSERT INTO ?? SET ?";
                 var table = ["t_user"];
-                query = mysql.format(query, table);
-                connection.query(query, post, function (error, rows) {
-                    if (error) {
+                query = mysql.format(query,table);
+                connection.query(query, post, function(error, rows){
+                    if(error){
                         console.log(error);
-
-                    } else {
-                        response.ok("Berhasil Menambahkan data user baru", res);
+                        
+                    }else {
+                        response.ok("Berhasil Menambahkan data user baru",res);
 
                     }
                 });
-            } else {
-                response.ok("Email sudah tedaftar!", res);
+            }else {
+                response.ok("Email sudah tedaftar!",res);
             }
         }
     })
@@ -94,4 +95,34 @@ exports.login = function(req,res){
             }
         }
     });
+}
+
+//menambahkan data service
+exports.tambahdataservice = function (req, res) {
+   var post = {
+    tgl_service: new Date(),
+    id_user: req.body.id_user,
+    id_montir: req.body.id_montir,
+    jumlah_sparepart: req.body.jumlah_sparepart,	
+    id_sparepart: req.body.id_sparepart,
+    jam_service: req.body.jam_service
+    
+   }
+   var query = "INSERT INTO ?? SET ?";
+   var table = ["t_service"];
+
+   query = mysql.format(query, table);
+    connection.query(query, post, function (error, rows) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Menambahkan Data", res)
+            }
+        });
+};
+
+
+
+exports.halamanrahasia = function(req,res){
+    response.ok("Halaman ini hanya untuk user dengan role = 2!",res);
 }
