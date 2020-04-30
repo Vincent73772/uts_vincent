@@ -35,5 +35,8 @@ module.exports = function(app){
 
     app.route('/tambahmontir')
     .post(jsonku.tambahmontir);
+
+    app.route('/tambahuser')
+    .post(jsonku.tambahuser);
 }
    
