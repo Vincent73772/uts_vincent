@@ -276,7 +276,7 @@ exports.ubahlevel = function (req, res) {
         });
 };
 
-//Mengubah data User
+//Mengubah data service
 exports.ubahservice = function (req, res) {
     var id_service = req.body.id_service;
     var tgl_service = new Date();
@@ -295,4 +295,17 @@ exports.ubahservice = function (req, res) {
                 response.ok("Berhasil Mengubah Data", res)
             }
         });
+};
+
+//menghapus data montir
+exports.hapusMontir = function(req, res){
+    var id = req.body.id_montir;
+    connection.query('DELETE FROM t_montir WHERE id_montir=?', [id],
+    function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok("Berhasil Hapus Data", res)
+        }
+    });
 };
