@@ -12,6 +12,9 @@ module.exports = function(app){
     app.route('/tampil/:id')
     .get(jsonku.tampildatasparepartid);
 
+    app.route('/tampilmontir')
+    .get(jsonku.tampildatamontir);
+
     app.route('/tampilmontir/:id')
     .get(jsonku.tampildatamontirid);
 
@@ -23,5 +26,8 @@ module.exports = function(app){
 
     app.route('/hapussparepart')
     .delete(jsonku.hapusSparepart);
+
+    app.route('/tambahservice')
+    .post(jsonku.tambahservice);
 }
    

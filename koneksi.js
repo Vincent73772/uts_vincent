@@ -13,4 +13,4 @@ conn.connect((err)=>{
     console.log('Mysql Terkoneksi');
 });
 
-module.exports = conn
+module.exports = conn;
