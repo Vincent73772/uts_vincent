@@ -6,64 +6,64 @@ module.exports = function(app){
     app.route('/')
    .get(jsonku.index);
 
-   app.route('/tampil')
+   app.route('/tampilsparepartdata')
     .get(jsonku.tampildatasparepart);
 
     app.route('/tampil/:id')
     .get(jsonku.tampildatasparepartid);
 
-    app.route('/tampilmontir')
+    app.route('/tampilmontirdata')
     .get(jsonku.tampildatamontir);
 
     app.route('/tampilmontir/:id')
     .get(jsonku.tampildatamontirid);
 
-    app.route('/tambahsparepart')
+    app.route('/tambahsparepartdata')
     .post(jsonku.tambahsparepart);
 
-    app.route('/ubahsparepart')
+    app.route('/ubahsparepartdata')
     .put(jsonku.ubahsparepart);
 
-    app.route('/hapussparepart')
+    app.route('/hapussparepartdata')
     .delete(jsonku.hapusSparepart);
 
-    app.route('/tambahservice')
+    app.route('/tambahservicedata')
     .post(jsonku.tambahservice);
 
-    app.route('/tampilservice')
+    app.route('/tampilservicedata')
     .get(jsonku.tampilservice);
 
-    app.route('/tambahmontir')
+    app.route('/tambahmontirdata')
     .post(jsonku.tambahmontir);
 
-    app.route('/tambahuser')
+    app.route('/tambahuserdata')
     .post(jsonku.tambahuser);
 
-    app.route('/tambahlevel')
+    app.route('/tambahleveldata')
     .post(jsonku.tambahlevel);
 
-    app.route('/ubahmontir')
+    app.route('/ubahmontirdata')
     .put(jsonku.ubahmontir);
 
-    app.route('/ubahuser')
+    app.route('/ubahuserdata')
     .put(jsonku.ubahuser);
 
-    app.route('/ubahlevel')
+    app.route('/ubahleveldata')
     .put(jsonku.ubahlevel);
 
-    app.route('/ubahservice')
+    app.route('/ubahservicedata')
     .put(jsonku.ubahservice);
 
-    app.route('/hapusmontir')
+    app.route('/hapusmontirdata')
     .delete(jsonku.hapusMontir);
 
-    app.route('/hapususer')
+    app.route('/hapususerdata')
     .delete(jsonku.hapususer);
 
-    app.route('/hapuslevel')
+    app.route('/hapusleveldata')
     .delete(jsonku.hapuslevel);
 
-    app.route('/hapusservice')
+    app.route('/hapusservicedata')
     .delete(jsonku.hapusservice);
 }
    
